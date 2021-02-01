@@ -13,4 +13,4 @@ n_paths = 10**4  # number paths to simulate
 condition = Condition()
 
 # Get another error because ConditionBinary doesn't have the condition method
-binary_payoff = ConditionBinary(100)
+binary_result = ConditionBinary(100)

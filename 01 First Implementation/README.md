@@ -3,7 +3,7 @@
 ### Monte Carlo Simulation
 A Monte Carlo Simulation just means that the simulations use random numbers (the term originated from the Monte Carlo Casino in Monaco). 
 Monte Carlo simulation is an extremely powerful technique, 
-and there are often many problems where it is the only reasonable approach currently available. 
+and there are often many problems where it's the only reasonable approach currently available. 
 The Model uses random (Gaussian) numbers to simulate the diffusion of some measured quantity. 
 
 ### The Model
@@ -24,7 +24,7 @@ and,
 B(X<sub>t</sub>, t) 
 = X<sub>t</sub> &sigma;,
 
-the diffusion of X is a Geometric Brownian Motion. 
+the diffusion of X is a _Geometric Brownian Motion_. 
 For these conditions, 
 the SDE has the solution (under Ito's interpretation)
 
@@ -33,6 +33,11 @@ X<sub>T</sub> = X<sub>0</sub>e<sup>(&mu; - &sigma;<sup>2</sup>/2)T + &sigma; &ra
 where Z is a standard Gaussian random variable, i.e., Z~N(0,1), 
 and T is the amount of time the quantity is left to diffuse.
 Note, we allow the parameters themselves to be random under suitable conditions.
+
+<div class="figure">
+  <img src="../Images/01%20First%20Implementation/simulated_paths.jpg" width="75%">
+  <p>Figure 1: Diffusion paths with absorbing boundary condition from above.
+</div>
 
 The objective of our Monte Carlo simulation is to approximate the expectation of the diffusion process subject to some boundary condition f(X<sub>t</sub>) using the law of large numbers, 
 
@@ -53,7 +58,7 @@ For example,
 if the measured level _X_ crosses a boundary _K_, 
 it's absorbed into the boundary such that
 
-f(X<sub>T</sub>) = max(X<sub>T</sub> - K, 0)
+f(X<sub>T</sub>) = max(K - X<sub>T</sub>, 0)
 
 at time T. 
 More generally, 
@@ -127,15 +132,15 @@ What will make it easy for someone to reuse your code?
 Returning to the simple Monte Carlo program. 
 Suppose we have to add a new feature to the routine,
 
-- If we've designed it well it will be simple to add features.
-- If we've designed poorly then we will have to rewrite existing code.
+- If we've designed it well, it will be easy to add new features.
+- If we've designed poorly, we will have to rewrite existing code.
 
 In order to add _another_ boundary condition to the current script, 
 how would we do that?
 
 Option one: 
 - Copy the function, 
-- change the name by adding "2" at the end, 
+- change the name by adding "_another" at the end, 
 - and rewrite the two lines where the condition is computed.
 
 Option two: 

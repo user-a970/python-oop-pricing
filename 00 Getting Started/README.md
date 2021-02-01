@@ -19,7 +19,7 @@ either through the menu item _Terminal > New Terminal_,
 or by [keyboard shortcut](https://code.visualstudio.com/shortcuts/keyboard-shortcuts-windows.pdf). 
 Make sure the terminal is set to `cmd` and not Powershell.
 
-![cmd](../Images/00%20Getting%20Started/cmd.PNG)
+![cmd](../Images/00%20Getting%20Started/cmd.png)
 
 From the command line install [Pylint](https://pylint.org/) either globally with 
 
@@ -39,7 +39,7 @@ set the workspace linter to pylint by opening VSCode's pallette with
 This is a feature enabled with the [Python Extension](https://code.visualstudio.com/docs/languages/python). 
 Choose pylint from the list of available linters.
 
-![Select Pylint](../Images/00%20Getting%20Started/select_pylint.PNG)
+![Select Pylint](../Images/00%20Getting%20Started/select_pylint.png)
 
 Next, 
 open the workspace settings configuration, 
@@ -97,7 +97,7 @@ If Pylint is correctly installed,
 and enabled in the configuration file, 
 a red line should appear under the `Point` class call. 
 
-![Pylint doing its job](../Images/00%20Getting%20Started/point_error.PNG)
+![Pylint doing its job](../Images/00%20Getting%20Started/point_error.png)
 
 Hovering the mouse over the red line will generate an information box attempting to debug the programming error detected by Pylint in the creation of the class instance. 
 Indeed, 
