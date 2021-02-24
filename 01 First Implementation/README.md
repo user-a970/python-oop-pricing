@@ -11,7 +11,7 @@ The _Ito Diffusion Process_ for some measurement of interest _X_,
 is described by the _Stochastic Differential Equation_ (SDE)
 
 dX<sub>t</sub> 
-= A(X<sub>t</sub>, t)dt + B(X<sub>t</sub>,t)dW<sub>t</sub>
+= A(X<sub>t</sub>, t)dt + B(X<sub>t</sub>,t)dW<sub>t</sub>.
 
 When W<sub>t</sub> is a Brownian Motion, 
 and the coefficients are
@@ -49,7 +49,9 @@ and compute
 
 f( X<sub>0</sub>e<sup>(&mu; - &sigma;<sup>2</sup>/2)T + &sigma; &radic;T x</sup> )
 
-We do this many times and calculate the average.
+We do this many times and calculate the average. 
+Ito's solution means we don't have to simulate the full trajectories &omega;<sub>i</sub> of the particles.  
+We can generate realizations at time T of the diffusion process.
 
 ## Model Features
 
@@ -99,7 +101,6 @@ slow to compute compared to addition and multiplication
 ## Critiquing the Simple Monte Carlo Routine
 The routine does what's needed but will soon run into difficulty when we need to add more features, 
 or change a part of the simulation.
-
 For example, 
 suppose we want to perform the following modifications / enhancements to the current version of the model
 
@@ -112,8 +113,7 @@ add antithetic sampling.
 - The standard error needs to be less than 0.0001, 
 so run it until that’s achieved. 
 We’re in a hurry though so don’t run it any longer than strictly necessary.
-- I read about low-discrepancy numbers over the weekend. 
-Add them in and see how good they are.
+- Add in low-discrepancy numbers and see how good they are.
 - Apparently, 
 standard error is a poor measure of error for low-discrepancy simulations. 
 Put in a convergence table instead.

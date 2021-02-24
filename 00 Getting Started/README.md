@@ -3,7 +3,13 @@
 Since this is a _Python_ Design Pattern project, 
 you'll need Python, 
 Python 3 specifically. 
-Open the command prompt _Search > cmd_ and enter
+Open the command prompt, _Search > cmd_ and run the command
+
+```bash
+python --version
+```
+
+If you have multiple versions of Python, use
 
 ```bash
 py -0p
@@ -36,7 +42,7 @@ pipenv install pylint
 Once pylint is installed, 
 set the workspace linter to pylint by opening VSCode's pallette with
 `Ctrl + Shift + p` and searching for _Python: Select Linter_. 
-This is a feature enabled with the [Python Extension](https://code.visualstudio.com/docs/languages/python). 
+This is a feature of the [Python Extension](https://code.visualstudio.com/docs/languages/python). 
 Choose pylint from the list of available linters.
 
 ![Select Pylint](../Images/00%20Getting%20Started/select_pylint.png)

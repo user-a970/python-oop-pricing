@@ -77,4 +77,4 @@ In the [Appendix](./07%20Appendix) we provide 2 examples of Python Patterns that
 [<b id="f2">2</b>]: The goal of any coding project is collaboration and transparency. 
 If Classes and Design Patterns alienate users, 
 and make the code harder to read, 
-then they should be avoided at all costs. [↩](#a2)
+then they should be avoided. [↩](#a2)
